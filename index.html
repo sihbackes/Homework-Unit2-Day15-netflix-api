@@ -13,7 +13,7 @@
       crossorigin="anonymous"
     />
     <link href="styles.css" rel="stylesheet" />
-    <script src="script.js" defer></script>
+    <script src="index.js" defer></script>
     <title>Netflix</title>
   </head>
 
@@ -21,7 +21,7 @@
     <!-- **NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="http://ubeytdemir.me/netflix-ui">
+        <a class="navbar-brand" href="index.html">
           <img src="./assets/netflix_logo.png" id="logo" />
         </a>
         <button
@@ -52,7 +52,7 @@
               <a class="nav-link" href="#">Recently Added</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">My List</a>
+              <a class="nav-link" href="backoffice.html">Backoffice</a>
             </li>
           </ul>
 
@@ -185,60 +185,38 @@
           </div>
         </div>
       </div>
-      <!-- **FIRST CATEGORY -->
-      <div class="movie-gallery m-2">
-        <h5 class="text-light mt-2 mb-2">Trending Now</h5>
-        <div id="trending-now" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="movie-row">
-                <div class="row">
-                  <div class="col-md-2">
+    </div>
+
+    <!-- **FIRST CATEGORY -->
+
+    <!-- **GALLERY -->
+    <div class="movie-gallery m-2">
+      <h5 class="text-light mt-2 mb-2">Trending Now</h5>
+      <div id="trending-now" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="movie-row">
+              <div class="row gallery-content" id="drama">
+                <!-- **REPLACE BY JS -->
+                <!-- <div class="col-md-2 ">
                     <img class="movie-cover" src="./assets/media/media0.jpg" />
-                  </div>
-                  <div class="col-md-2">
-                    <img class="movie-cover" src="./assets/media/media1.jpg" />
-                  </div>
-                  <div class="col-md-2">
-                    <img class="movie-cover" src="./assets/media/media2.jpg" />
-                  </div>
-                  <div class="col-md-2">
-                    <img class="movie-cover" src="./assets/media/media3.jpg" />
-                  </div>
-                  <div class="col-md-2">
-                    <img class="movie-cover" src="./assets/media/media4.jpg" />
-                  </div>
-                  <div class="col-md-2">
-                    <img class="movie-cover" src="./assets/media/media5.jpg" />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="movie-row">
-                <div class="row">
-                  <div class="col-md-2">
-                    <img class="movie-cover" src="./assets/media/media0.jpg" />
-                  </div>
-                  <div class="col-md-2">
-                    <img class="movie-cover" src="./assets/media/media1.jpg" />
-                  </div>
-                  <div class="col-md-2">
-                    <img class="movie-cover" src="./assets/media/media2.jpg" />
-                  </div>
-                  <div class="col-md-2">
-                    <img class="movie-cover" src="./assets/media/media3.jpg" />
-                  </div>
-                  <div class="col-md-2">
-                    <img class="movie-cover" src="./assets/media/media4.jpg" />
-                  </div>
-                  <div class="col-md-2">
-                    <img class="movie-cover" src="./assets/media/media5.jpg" />
-                  </div>
-                </div>
+                  </div> -->
               </div>
             </div>
           </div>
+
+          <!-- *TODO - IMPLEMENT THE CAROUSEL -->
+          <!-- **CAROUSEL -->
+          <!-- <div class="carousel-item">
+            <div class="movie-row">
+              <div class="row gallery-content-carousel">
+                <div class="col-md-2">
+                  <img class="movie-cover" src="./assets/media/media0.jpg" />
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- *TODO - IMPLEMENT THESE BUTTONS -->
           <button
             class="carousel-control-prev"
             type="button"
@@ -252,154 +230,6 @@
             class="carousel-control-next"
             type="button"
             data-bs-target="#trending-now"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </div>
-      <!-- **SECOND CATEGORY -->
-      <div class="movie-gallery m-2">
-        <h5 class="text-light mt-2 mb-2">Watch It Again</h5>
-        <div id="watch-it-again" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="movie-row">
-                <div class="row">
-                  <div class="col-md-2">
-                    <img class="movie-cover" src="./assets/media/media6.jpg" />
-                  </div>
-                  <div class="col-md-2">
-                    <img class="movie-cover" src="./assets/media/media7.jpg" />
-                  </div>
-                  <div class="col-md-2">
-                    <img class="movie-cover" src="./assets/media/media8.jpg" />
-                  </div>
-                  <div class="col-md-2">
-                    <img class="movie-cover" src="./assets/media/media9.jpg" />
-                  </div>
-                  <div class="col-md-2">
-                    <img class="movie-cover" src="./assets/media/media10.jpg" />
-                  </div>
-                  <div class="col-md-2">
-                    <img class="movie-cover" src="./assets/media/media11.jpg" />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="movie-row">
-                <div class="row">
-                  <div class="col-md-2">
-                    <img class="movie-cover" src="./assets/media/media6.jpg" />
-                  </div>
-                  <div class="col-md-2">
-                    <img class="movie-cover" src="./assets/media/media7.jpg" />
-                  </div>
-                  <div class="col-md-2">
-                    <img class="movie-cover" src="./assets/media/media8.jpg" />
-                  </div>
-                  <div class="col-md-2">
-                    <img class="movie-cover" src="./assets/media/media9.jpg" />
-                  </div>
-                  <div class="col-md-2">
-                    <img class="movie-cover" src="./assets/media/media10.jpg" />
-                  </div>
-                  <div class="col-md-2">
-                    <img class="movie-cover" src="./assets/media/media11.jpg" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#watch-it-again"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#watch-it-again"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </div>
-      <!-- **THIRD CATEGORY -->
-      <div class="movie-gallery m-2">
-        <h5 class="text-light mt-2 mb-2">New Releases</h5>
-        <div id="new-releases" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="movie-row">
-                <div class="row">
-                  <div class="col-md-2">
-                    <img class="movie-cover" src="./assets/media/media12.jpg" />
-                  </div>
-                  <div class="col-md-2">
-                    <img class="movie-cover" src="./assets/media/media13.jpg" />
-                  </div>
-                  <div class="col-md-2">
-                    <img class="movie-cover" src="./assets/media/media14.jpg" />
-                  </div>
-                  <div class="col-md-2">
-                    <img class="movie-cover" src="./assets/media/media15.jpg" />
-                  </div>
-                  <div class="col-md-2">
-                    <img class="movie-cover" src="./assets/media/media16.jpg" />
-                  </div>
-                  <div class="col-md-2">
-                    <img class="movie-cover" src="./assets/media/media17.jpg" />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="movie-row">
-                <div class="row">
-                  <div class="col-md-2">
-                    <img class="movie-cover" src="./assets/media/media12.jpg" />
-                  </div>
-                  <div class="col-md-2">
-                    <img class="movie-cover" src="./assets/media/media13.jpg" />
-                  </div>
-                  <div class="col-md-2">
-                    <img class="movie-cover" src="./assets/media/media14.jpg" />
-                  </div>
-                  <div class="col-md-2">
-                    <img class="movie-cover" src="./assets/media/media15.jpg" />
-                  </div>
-                  <div class="col-md-2">
-                    <img class="movie-cover" src="./assets/media/media16.jpg" />
-                  </div>
-                  <div class="col-md-2">
-                    <img class="movie-cover" src="./assets/media/media17.jpg" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#new-releases"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#new-releases"
             data-bs-slide="next"
           >
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -408,6 +238,105 @@
         </div>
       </div>
     </div>
+    <!-- **SECOND CATEGORY -->
+    <!-- **GALLERY -->
+    <div class="movie-gallery m-2">
+      <h5 class="text-light mt-2 mb-2">Trending Now</h5>
+      <div id="trending-now" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="movie-row">
+              <div class="row gallery-content" id="comedy">
+                <!-- <div class="col-md-2 ">
+                      <img class="movie-cover" src="./assets/media/media0.jpg" />
+                    </div> -->
+              </div>
+            </div>
+          </div>
+
+          <!-- *TODO - IMPLEMENT THE CAROUSEL -->
+          <!-- **CAROUSEL -->
+          <!-- <div class="carousel-item">
+              <div class="movie-row">
+                <div class="row gallery-content-carousel">
+                  <div class="col-md-2">
+                    <img class="movie-cover" src="./assets/media/media0.jpg" />
+                  </div>
+                </div>
+              </div>
+            </div> -->
+          <!-- *TODO - IMPLEMENT THESE BUTTONS -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#trending-now"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#trending-now"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- **THIRD CATEGORY -->
+    <!-- **GALLERY -->
+    <div class="movie-gallery m-2">
+      <h5 class="text-light mt-2 mb-2">Trending Now</h5>
+      <div id="trending-now" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="movie-row">
+              <div class="row gallery-content" id="horror">
+                <!-- <div class="col-md-2 ">
+                          <img class="movie-cover" src="./assets/media/media0.jpg" />
+                        </div> -->
+              </div>
+            </div>
+          </div>
+
+          <!-- *TODO - IMPLEMENT THE CAROUSEL -->
+          <!-- **CAROUSEL -->
+          <!-- <div class="carousel-item">
+                  <div class="movie-row">
+                    <div class="row gallery-content-carousel">
+                      <div class="col-md-2">
+                        <img class="movie-cover" src="./assets/media/media0.jpg" />
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+          <!-- *TODO - IMPLEMENT THESE BUTTONS -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#trending-now"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#trending-now"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
     <!-- **FOOTER -->
     <div class="container">
       <footer>
