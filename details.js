@@ -15,6 +15,7 @@ async function getMovie() {
   );
   const movies = await response.json();
   const movie = movies.find((movie) => movie._id === movieId);
+  console.log(movie);
   return movie;
 }
 
@@ -65,5 +66,7 @@ async function onDelete() {
 }
 
 function onEdit() {
-  window.location.assign(`backoffice.html?movieId=${movieId}`);
+  window.location.assign(
+    `backoffice.html?movieId=${movieId}&category=${movieCategory}`
+  );
 }

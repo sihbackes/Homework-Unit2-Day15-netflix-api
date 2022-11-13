@@ -1,10 +1,11 @@
 const params = new URLSearchParams(window.location.search);
 const movieId = params.get("movieId");
+const movieCategory = params.get("category");
 
 window.onload = async () => {
   if (movieId) {
     const response = await fetch(
-      `https://striveschool-api.herokuapp.com/api/${movieId}`,
+      `https://striveschool-api.herokuapp.com/api/movies/${movieCategory}`,
       {
         headers: {
           Authorization:
@@ -12,7 +13,9 @@ window.onload = async () => {
         },
       }
     );
-    const movie = await response.json();
+    const movies = await response.json();
+    const movie = movies.find((movie) => movie._id === movieId);
+    console.log(movies);
     let addMovie = document.getElementById("add-movie");
     addMovie.innerText = "Edit Movie";
     addMovie.classList.remove("btn-primary");
@@ -43,7 +46,6 @@ async function addNewMovie(event) {
     },
     body: JSON.stringify(newMovie),
   };
-  console.log(options);
   try {
     const endpoint = movieId
       ? `https://striveschool-api.herokuapp.com/api/movies/${movieId}`
@@ -54,6 +56,10 @@ async function addNewMovie(event) {
       alert(
         movieId ? "Movie edited successfully!" : "Movie added successfully!"
       );
+      document.querySelector("#movie-name").value = "";
+      document.querySelector("#movie-description").value = "";
+      document.querySelector("#movie-category").value = "";
+      document.querySelector("#movie-image").value = "";
     } else {
       throw new Error("ERROR WHILE EXECUTING THE TRY BLOCK!");
     }
